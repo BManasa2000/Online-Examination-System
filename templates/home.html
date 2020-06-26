@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<h1 align="center">Welcome!</h1>
+	<form>
+		<button type="submit" formaction="/set">Set a paper</button>
+		<button type="submit" formaction="/solve" id="Solve">Start solving</button>
+	</form>
+	<script type="text/javascript" src="/static/recording.js"></script>
+{% endblock %}

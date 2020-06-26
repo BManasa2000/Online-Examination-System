@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+            <h1>All the best!</h1>
+            <img height="200" width="200" src="{{ url_for('video_viewer')}}">
+            <form action="/submit" method="post">
+                <div class="form-group">
+                    {{q}}
+                    <br>
+                    <label for="answer">Answer</label>
+                    <textarea class="form-control rounded-0" id="answer" rows="10" name="answer" autocomplete="off" placeholder="Type your answer here" type="text" autofocus style="resize"></textarea>
+                </div>
+                <!--<textarea name="answer" autocomplete="off" placeholder="Type your answer here" type="text" autofocus style="resize"></textarea>-->
+                <input type="submit" value="Submit" id="Submit">
+            </form>
+            <script type="text/javascript">
+                textarea = document.querySelector("#answer");
+                textarea.addEventListener('input', autoResize, false);
+
+                function autoResize() {
+                    this.style.height = 'auto';
+                    this.style.height = this.scrollHeight + 'px';
+                }
+            </script> 
+            <script type="text/javascript" src="/static/recorder.js"></script>
+            
+{% endblock %}
+

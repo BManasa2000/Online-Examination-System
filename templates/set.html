@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<form action="/nextques" method="post">
+		<div name="Question">
+			<label for="question">Question</label>
+			<textarea class="form-control rounded-0" id="question" rows="10" name="question" autocomplete="off" placeholder="Type your question here" type="text" autofocus style="resize"></textarea>
+		</div>
+		<br>
+		<div name="Keywords">
+			<label for="keywords">Key words</label>
+			<textarea class="form-control rounded-0" id="keywords" rows="10" name="keywords" autocomplete="off" placeholder="Type the keywords here" type="text" autofocus style="resize"></textarea>
+		</div>
+		<br>
+		<div name="Keysen">
+			<label for="keysen">Key sentences</label>
+			<textarea class="form-control rounded-0" id="keysen" rows="10" name="keysen" autocomplete="off" placeholder="Type the keysentences here" type="text" autofocus style="resize"></textarea>
+		</div>
+		<br>
+		<input type="submit" value="submit">
+
+		<script type="text/javascript">
+            textarea = document.querySelectorAll("#question,#keywords,#keysen");
+            textarea.addEventListener('input', autoResize, false);
+
+            function autoResize() {
+        	    this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+                }
+        </script>
+	</form>
+{% endblock %}

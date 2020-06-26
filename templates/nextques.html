@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<div>
+		<b>Question:</b> {{q}}
+		<br>
+		<b>Keywords:</b> {{kw}}
+		<br>
+		<b>Keysentences:</b> {{ks}}
+		<br>
+		<b>Number of questions made so far</b>: {{count}}
+	</div>
+		<br>
+	<form>
+		<button type="submit" formaction="/set">Another question</button>
+		<button type="submit" formaction="/">Finish</button>
+	</form>
+{% endblock %}

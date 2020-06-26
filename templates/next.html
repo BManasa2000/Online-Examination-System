@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h3> {{result}} </h3>
+    <form>
+        <button type="submit" formaction="/solve" align="centre">Next question</button>
+        <button type="submit" formaction="/complete">Finish</button>
+    </form>
+{% endblock %}
